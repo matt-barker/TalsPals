@@ -1,0 +1,15 @@
+.logo-icon {
+      transition: 300ms;
+      width:28%;
+    }
+#home {
+  width:100%;
+  overflow: hidden;
+  padding:0;
+    min-height: 225px;
+  @media(min-width:768px){
+    margin-top:104px;
+    //max-height: calc(100vh - 104px);
+    max-height: 75vh;
+  }
+}

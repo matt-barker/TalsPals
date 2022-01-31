@@ -1,0 +1,116 @@
+nav {
+  z-index: 2;
+  @media(min-width:768px){
+    position: fixed;
+    top:0;
+  }
+
+  .nav-container {
+    max-width:1170px;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    
+    @media(min-width:768px){
+      flex-direction: row;
+      padding-left:10px;
+    }
+  }
+  background: $primary-colour;
+  width:100%;
+  padding:10px 0 0 0;
+  .branding {
+    transition: 300ms;
+    display:inline-flex;
+    align-items: center;
+    width:230px;
+    
+    @media(min-width:768px){
+      width:300px;
+      padding:0 0 10px 0;
+    }
+    @media(min-width:1170px){
+      width:300px;
+    }
+    .site-name{
+      text-align: center;
+      display: inline-block;
+      flex-direction: column;
+      align-items: center;
+      padding:0 5px;
+      width:78%;
+      h1,h2 {
+        transition: 300ms;
+        color:#f7f7f7;
+        display:inline-block;
+        margin:5px 0;
+        line-height: .8em;
+      }
+      h1 {
+        font-family:"Pacifico" , cursive;
+        font-size: 1.8em;
+        @media(min-width:768px){
+          font-size:2.8em;
+        }
+      }
+      h2 {
+        color: $secondary-colour;
+        font-size: 1.5em;
+        
+        @media(min-width:768px){
+          font-size:2.2em;
+        }
+      }
+    }
+    
+    
+  }
+  .navigation-items {
+    display:inline;
+    width:100%;
+    text-align: center;
+    padding:5px 0;
+    background: $primary-colour;
+     @media(min-width:768px){
+        width:auto;
+      }
+      &.stuck {
+        position:fixed;
+        top:0;
+        z-index: 10;
+      }
+    ul {
+      padding:0;
+      padding-left:0;
+      display:inline-block;
+      margin:5px 0;
+      li {
+        font-family: "Quicksand", sans-serif;
+        display: inline;
+        font-size:1em;
+        //margin:5px;
+        padding:5px 2px;
+        color:#f7f7f7;
+        @media(min-width:361px){
+          //margin:5px;
+          padding:3px 8px;
+          font-size:1em;
+        }
+        @media(min-width:768px){
+          font-size: 1.3em;
+          margin:10px;
+          padding:7px;
+        }
+        border-radius: $fancy-border;
+        transition:300ms;
+        &:hover,&.active{
+          background: $secondary-colour;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+#contact {
+    position: relative;
+    &:before {
+        position: absolute;
+    content: " ";
+    display: block;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0 100vw 50px 0;
+    border-color:  #fff transparent  ;
+    }
+.contact-section-wrapper {
+	display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 50px;
+      @media(min-width:768px){
+        flex-direction: row;
+  }
+}
+  input {
+    width: 100%;
+    display: block;
+    height: 40px;
+    border: 2px solid black;
+    text-align: left;
+    padding:5px;
+  }
+  textarea {
+    display: block;
+    width:100%;
+    border:2px solid black;
+    height:180px;
+  }
+  label {
+    text-align: left;
+    font-size: 1.3em;
+  }
+  .contact-form-container {
+	width:100%;
+    background: $quaternary-colour;
+    text-align: center;
+    padding: 0 0px;
+    margin:0 10px;
+    @media(min-width:768px){
+      padding: 0;
+      width: 50%;
+    }
+    .row {
+      margin: 10px 0;
+    }
+  }
+  .contact-panels {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:650px;
+      @media(min-width:768px){
+        width: 50%;
+        padding-top: 0;
+        //height:auto;
+      }
+    .contact-panel-wrapper {
+      padding: 5%;
+      height:100%;
+      display: inline-block;
+      .contact-panel {
+        border:4px solid $quaternary-colour;
+        width:100%;
+        text-align: center;
+        border-radius: 7px;
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: space-evenly;
+          a,h2 {
+          margin: 0;
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+      .contact-icon {
+        position: absolute;
+        top:-30px;
+        left: 0;
+        right: 0;
+        width: 100px;
+        background: white;
+        margin: 0 auto;
+        display: inline-block;
+        svg {
+          fill:$secondary-colour;
+        }
+
+      }
+      a {
+          display: inline-block;
+          font-size: 1.5em;
+          color: $secondary-colour;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+    }
+  }
+}

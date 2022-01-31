@@ -1,0 +1,62 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 22/06/2016 15:13
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("../font/Flaticon.eot");
+  src: url("../font/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../font/Flaticon.woff") format("woff"),
+       url("../font/Flaticon.ttf") format("truetype"),
+       url("../font/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display:swap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("../font/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-angry-bulldog-face:before { content: "\f100"; }
+.flaticon-angry-dog:before { content: "\f101"; }
+.flaticon-animal-paw-print:before { content: "\f102"; }
+.flaticon-basset-hound-dog-head:before { content: "\f103"; }
+.flaticon-belt-and-buckle:before { content: "\f104"; }
+.flaticon-border-collie-dog-head:before { content: "\f105"; }
+.flaticon-border-collie-head:before { content: "\f106"; }
+.flaticon-bulldog-head:before { content: "\f107"; }
+.flaticon-chewing-bone-for-dog:before { content: "\f108"; }
+.flaticon-doberman-dog-head:before { content: "\f109"; }
+.flaticon-dog-bone:before { content: "\f10a"; }
+.flaticon-dog-face:before { content: "\f10b"; }
+.flaticon-dog-face-1:before { content: "\f10c"; }
+.flaticon-dog-face-2:before { content: "\f10d"; }
+.flaticon-dog-food-bowl:before { content: "\f10e"; }
+.flaticon-dog-head:before { content: "\f10f"; }
+.flaticon-dog-kennel:before { content: "\f110"; }
+.flaticon-dog-with-big-and-pointy-ears:before { content: "\f111"; }
+.flaticon-dog-with-chubby-cheeks:before { content: "\f112"; }
+.flaticon-dog-with-floppy-ears:before { content: "\f113"; }
+.flaticon-dog-with-floppy-ears-1:before { content: "\f114"; }
+.flaticon-dog-with-long-ears:before { content: "\f115"; }
+.flaticon-dog-with-square-head-shape:before { content: "\f116"; }
+.flaticon-face-of-a-dog-with-sleepy-eyes:before { content: "\f117"; }
+.flaticon-face-of-staring-dog:before { content: "\f118"; }
+.flaticon-funny-dog-head:before { content: "\f119"; }
+.flaticon-long-haired-dog-head:before { content: "\f11a"; }
+.flaticon-pile-of-dung:before { content: "\f11b"; }
+.flaticon-prize-badge-with-paw-print:before { content: "\f11c"; }
+.flaticon-tennis-ball:before { content: "\f11d"; }
