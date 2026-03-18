@@ -306,6 +306,9 @@ padding-left: 0;
 .fancy-border {
   border-radius: $fancy-border;
 }
+.fancy-border-message-area {
+  border-radius: 65px 45px 225px 75px/15px 100px 25px 50px;
+}
 
 .double-border {
   border:15px double #456990;
