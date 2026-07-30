@@ -32,7 +32,13 @@
     />
     <meta
       property="og:image"
-      content="https://www.talspals.co.uk/img/rocky.jpg"
+      content="https://www.talspals.co.uk/img/photos/hero-1280.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+    <meta
+      property="og:image:alt"
+      content="Tal's Pals owner Chantal crouching in a field beside a black labrador."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@talspals" />
@@ -46,12 +52,24 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.talspals.co.uk/img/rocky.jpg"
+      content="https://www.talspals.co.uk/img/photos/hero-1280.jpg"
     />
-    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
-    <link rel="stylesheet" href="css/main-header.css?v=1" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main-header.css?v=2" />
+    <link rel="stylesheet" href="css/main.css?v=11" />
+    <!-- Preload the hero (LCP element) at the width this device will actually use. -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="img/photos/hero-1280.avif"
+      imagesrcset="img/photos/hero-640.avif 640w, img/photos/hero-960.avif 960w, img/photos/hero-1280.avif 1280w, img/photos/hero-1600.avif 1600w, img/photos/hero-1920.avif 1920w, img/photos/hero-2560.avif 2560w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
     <!-- Place favicon.ico in the root directory -->
   </head>
 
@@ -63,6 +81,8 @@
         "name": "Tal's Pals",
         "url": "https://www.talspals.co.uk",
         "address": "Tal's Pals, Staveley, Chesterfield",
+        "image": "https://www.talspals.co.uk/img/photos/hero-1280.jpg",
+        "logo": "https://www.talspals.co.uk/icon.png",
         "sameAs": ["https://www.facebook.com/talspals"]
       }
     </script>
@@ -103,11 +123,50 @@
     </nav>
     <!--home-->
     <section id="home">
-      <img
-        data-src="https://res.cloudinary.com/talspals/image/upload/ar_1.6,c_fill,dpr_auto,e_vibrance:20,g_south,q_auto:eco,w_auto/v1598949122/IMG_20200801_102248.jpg"
-        class="cld-responsive main-image"
-        alt="Photograph of tal's pals owner Chantal with a black labrador."
-      />
+      <picture>
+        <source
+          type="image/avif"
+          sizes="100vw"
+          srcset="
+            img/photos/hero-640.avif   640w,
+            img/photos/hero-960.avif   960w,
+            img/photos/hero-1280.avif 1280w,
+            img/photos/hero-1600.avif 1600w,
+            img/photos/hero-1920.avif 1920w,
+            img/photos/hero-2560.avif 2560w
+          "
+        />
+        <source
+          type="image/webp"
+          sizes="100vw"
+          srcset="
+            img/photos/hero-640.webp   640w,
+            img/photos/hero-960.webp   960w,
+            img/photos/hero-1280.webp 1280w,
+            img/photos/hero-1600.webp 1600w,
+            img/photos/hero-1920.webp 1920w,
+            img/photos/hero-2560.webp 2560w
+          "
+        />
+        <img
+          src="img/photos/hero-1280.jpg"
+          sizes="100vw"
+          srcset="
+            img/photos/hero-640.jpg   640w,
+            img/photos/hero-960.jpg   960w,
+            img/photos/hero-1280.jpg 1280w,
+            img/photos/hero-1600.jpg 1600w,
+            img/photos/hero-1920.jpg 1920w,
+            img/photos/hero-2560.jpg 2560w
+          "
+          width="2560"
+          height="1600"
+          fetchpriority="high"
+          decoding="async"
+          class="main-image"
+          alt="Tal's Pals owner Chantal crouching in a field beside a black labrador."
+        />
+      </picture>
     </section>
     <!--services-->
     <section id="services">
@@ -116,11 +175,47 @@
       <div class="container">
         <div class="align-items-center">
           <div class="image-right">
-            <img
-              data-src="https://res.cloudinary.com/talspals/image/upload/w_auto,dpr_auto,c_fill,ar_1.5,q_auto:eco/v1598949121/IMG_20200616_113716509_rlc82t.jpg"
-              class="cld-responsive services-image fancy-border double-border"
-              alt="Photograph of a black labrador with a large stick."
-            />
+            <picture>
+              <source
+                type="image/avif"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/services-400.avif   400w,
+                  img/photos/services-600.avif   600w,
+                  img/photos/services-800.avif   800w,
+                  img/photos/services-1200.avif 1200w,
+                  img/photos/services-1600.avif 1600w
+                "
+              />
+              <source
+                type="image/webp"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/services-400.webp   400w,
+                  img/photos/services-600.webp   600w,
+                  img/photos/services-800.webp   800w,
+                  img/photos/services-1200.webp 1200w,
+                  img/photos/services-1600.webp 1600w
+                "
+              />
+              <img
+                src="img/photos/services-800.jpg"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/services-400.jpg   400w,
+                  img/photos/services-600.jpg   600w,
+                  img/photos/services-800.jpg   800w,
+                  img/photos/services-1200.jpg 1200w,
+                  img/photos/services-1600.jpg 1600w
+                "
+                width="2400"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                class="services-image fancy-border double-border"
+                alt="A black labrador carrying a large stick in its mouth."
+              />
+            </picture>
           </div>
           <div class="services-text">
             <img src="img/dog-playing.svg" class="background-image" alt="" />
@@ -208,11 +303,47 @@
       <div class="container">
         <div class="">
           <div class="image-left">
-            <img
-              data-src="https://res.cloudinary.com/talspals/image/upload/w_auto,c_fill,ar_1.5,q_auto:eco/v1598949122/IMG_20200526_154803848_HDR_mzsoce.jpg"
-              class="cld-responsive services-image fancy-border double-border"
-              alt="Photograph of a bichon frise"
-            />
+            <picture>
+              <source
+                type="image/avif"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/about-400.avif   400w,
+                  img/photos/about-600.avif   600w,
+                  img/photos/about-800.avif   800w,
+                  img/photos/about-1200.avif 1200w,
+                  img/photos/about-1600.avif 1600w
+                "
+              />
+              <source
+                type="image/webp"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/about-400.webp   400w,
+                  img/photos/about-600.webp   600w,
+                  img/photos/about-800.webp   800w,
+                  img/photos/about-1200.webp 1200w,
+                  img/photos/about-1600.webp 1600w
+                "
+              />
+              <img
+                src="img/photos/about-800.jpg"
+                sizes="(min-width: 1170px) 600px, (min-width: 768px) 400px, calc(100vw - 30px)"
+                srcset="
+                  img/photos/about-400.jpg   400w,
+                  img/photos/about-600.jpg   600w,
+                  img/photos/about-800.jpg   800w,
+                  img/photos/about-1200.jpg 1200w,
+                  img/photos/about-1600.jpg 1600w
+                "
+                width="2400"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+                class="services-image fancy-border double-border"
+                alt="A white bichon frise lying on the grass in the sunshine."
+              />
+            </picture>
           </div>
           <div class="about-text">
             <img src="img/man-and-dog.svg" class="background-image" alt="" />
@@ -482,9 +613,21 @@
               <h2>Send me a Message</h2>
               <form
                 id="contact-form"
-                action="https://formspree.io/xeqkbkvd"
+                name="contact"
                 method="POST"
+                action="/thanks.html"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
               >
+                <!-- Netlify: identifies the form on AJAX submissions -->
+                <input type="hidden" name="form-name" value="contact" />
+                <!-- Netlify: spam trap, hidden from real visitors -->
+                <p class="hidden">
+                  <label
+                    >Don't fill this in if you're human:
+                    <input name="bot-field" tabindex="-1" autocomplete="off"
+                  /></label>
+                </p>
                 <div class="row">
                   <div class="col-xs-12">
                     <label for="name">Name:*</label>
@@ -665,8 +808,6 @@
     <footer>
       <!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
     </footer>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css?v=10" />
     <!--<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&family=Quicksand:wght@700&display=swap" rel="stylesheet">-->
     <style>
       /* latin-ext */
@@ -756,12 +897,7 @@
           '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
         );
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cloudinary-core/2.8.1/cloudinary-core-shrinkwrap.min.js"></script>
     <script src="js/main-dist.js?v=1" async></script>
-    <script type="text/javascript" async>
-      var cl = cloudinary.Cloudinary.new({ cloud_name: "talspals" });
-      cl.responsive();
-    </script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <!--
@@ -795,20 +931,36 @@
 
         form.addEventListener("submit", function (ev) {
           ev.preventDefault();
-          var data = new FormData(form);
-          ajax(form.method, form.action, data, success, error);
+          // Netlify Forms expects an application/x-www-form-urlencoded body
+          // posted to the page the form lives on, including the form-name field.
+          ajax("POST", "/", encode(new FormData(form)), success, error);
         });
       });
+
+      // serialise a FormData into an application/x-www-form-urlencoded string
+
+      function encode(data) {
+        var pairs = [];
+        data.forEach(function (value, key) {
+          pairs.push(
+            encodeURIComponent(key) + "=" + encodeURIComponent(value)
+          );
+        });
+        return pairs.join("&");
+      }
 
       // helper function for sending an AJAX request
 
       function ajax(method, url, data, success, error) {
         var xhr = new XMLHttpRequest();
         xhr.open(method, url);
-        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
         xhr.onreadystatechange = function () {
           if (xhr.readyState !== XMLHttpRequest.DONE) return;
-          if (xhr.status === 200) {
+          if (xhr.status >= 200 && xhr.status < 400) {
             success(xhr.response, xhr.responseType);
           } else {
             error(xhr.status, xhr.response, xhr.responseType);

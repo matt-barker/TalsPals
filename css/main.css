@@ -554,6 +554,7 @@ textarea {
 ==============================================================================*/
 img {
   width: 100%;
+  height: auto;
 }
 
 section {
@@ -600,10 +601,8 @@ section {
   border: 15px double #456990;
 }
 
-.cld-responsive:after {
-  content: "\f102";
-  font-family: Flaticon;
-  color: #ec825c;
+picture {
+  display: block;
 }
 
 .image-left, .image-right {

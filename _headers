@@ -1,0 +1,19 @@
+# Netlify custom headers (https://docs.netlify.com/routing/headers/)
+
+# Generated image variants — the filename encodes the width, so a given URL's
+# content only changes when the photo itself is replaced. Cache hard, but allow
+# a stale copy to be served while a new one is revalidated in the background.
+/img/photos/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+/img/*
+  Cache-Control: public, max-age=604800
+
+/font/*
+  Cache-Control: public, max-age=2592000
+
+# CSS and JS are cache-busted with ?v= query strings in the markup.
+/css/*
+  Cache-Control: public, max-age=604800
+/js/*
+  Cache-Control: public, max-age=604800

@@ -269,6 +269,7 @@ textarea {
 
 img {
   width:100%;
+  height:auto; // width/height attrs are set on img tags to reserve space (CLS)
 }
 
 section {
@@ -314,13 +315,10 @@ padding-left: 0;
   border:15px double #456990;
 }
 
-.cld-responsive {
-  &:after {
-        content:"\f102";
-        font-family: Flaticon;
-        color: $secondary-colour;
-  }
+picture {
+  display: block;
 }
+
 .image-left,.image-right {
     margin:15px;
     width:100%; 
