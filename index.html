@@ -76,14 +76,87 @@
   <body>
     <script type="application/ld+json">
       {
-        "@context": "http://schema.org",
-        "@type": "Organization",
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
         "name": "Tal's Pals",
+        "description": "Friendly and flexible dog walking & pet visits in Staveley, Chesterfield and the surrounding Derbyshire villages. Fully insured.",
         "url": "https://www.talspals.co.uk",
-        "address": "Tal's Pals, Staveley, Chesterfield",
+        "telephone": "+447533173299",
+        "email": "chantal@talspals.co.uk",
         "image": "https://www.talspals.co.uk/img/photos/hero-1280.jpg",
         "logo": "https://www.talspals.co.uk/icon.png",
-        "sameAs": ["https://www.facebook.com/talspals"]
+        "priceRange": "£12-£18",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Staveley",
+          "addressRegion": "Derbyshire",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          { "@type": "Place", "name": "Staveley" },
+          { "@type": "Place", "name": "Inkersall" },
+          { "@type": "Place", "name": "Brimington" },
+          { "@type": "Place", "name": "Lowgates" },
+          { "@type": "Place", "name": "Mastin Moor" },
+          { "@type": "Place", "name": "Poolsbrook" },
+          { "@type": "Place", "name": "Chesterfield" }
+        ],
+        "sameAs": ["https://www.facebook.com/talspals"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "23"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dog Walking",
+              "areaServed": "Staveley, Chesterfield, Derbyshire"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Pet Visits",
+              "areaServed": "Staveley, Chesterfield, Derbyshire"
+            }
+          }
+        ],
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Martin Aston" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Chantal has worked for me both full-time and part-time since 2013 and has always been reliable and dependable. She learned a bit of \"dog-craft\" from me with my Jack Russell Jackieboy and she continues to walk him on a regular basis for me. I would recommend her to anyone who needs a reliable and trustworthy dog walker who will always endeavour to provide the professional service that this responsible job demands."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Teresa Smith" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Chantal is a brilliant dog walker. She walked my 4 bichon fries. She always turned up on time and great communication. My dogs adored her."
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Tyler Henderson" },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "A friendly, professional and enjoyable experience. My dog Riley thoroughly enjoyed each and every one of his walks. Looking forward to the next one with great exuberance! Unquestionably fantastic service, well recommended."
+          }
+        ]
       }
     </script>
     <!--[if IE]>
@@ -223,7 +296,7 @@
               Tal’s Pals provides a professional, personal and friendly dog
               walking service. I am fully insured and experienced in dog
               walking. I'm based in Staveley and cover all surrounding areas
-              including Inkersall, Brimington, Lowegates, Mastin Moor and
+              including Inkersall, Brimington, Lowgates, Mastin Moor and
               Poolsbrook. I provide a high quality service, where reliability,
               value for money and flexibility are ensured. The highest level of
               care will be provided to your pet and they will be treated as if
