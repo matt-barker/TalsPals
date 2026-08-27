@@ -563,7 +563,7 @@ section {
 }
 
 .section-seperator {
-  color: #456990;
+  color: #274361;
   display: inline-block;
   width: 50px;
   height: 50px;
@@ -690,7 +690,7 @@ nav .nav-container {
   }
 }
 nav {
-  background: #456990;
+  background: #274361;
   width: 100%;
   padding: 10px 0 0 0;
 }
@@ -749,7 +749,7 @@ nav .navigation-items {
   width: 100%;
   text-align: center;
   padding: 5px 0;
-  background: #456990;
+  background: transparent;
 }
 @media (min-width: 768px) {
   nav .navigation-items {
@@ -760,6 +760,7 @@ nav .navigation-items.stuck {
   position: fixed;
   top: 0;
   z-index: 10;
+  background: #274361;
 }
 nav .navigation-items ul {
   padding: 0;
