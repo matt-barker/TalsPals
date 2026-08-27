@@ -41,7 +41,7 @@ nav {
       flex-direction: column;
       align-items: center;
       padding:0 5px;
-      width:78%;
+      width:55%;
       h1,h2 {
         transition: 300ms;
         color:#f7f7f7;
@@ -58,10 +58,10 @@ nav {
       }
       h2 {
         color: $secondary-colour;
-        font-size: 1.5em;
+        font-size: 2.2em;
         
         @media(min-width:768px){
-          font-size:2.2em;
+          font-size:3em;
         }
       }
     }

@@ -72,8 +72,7 @@ a {
 abbr[title] {
   border-bottom: none; /* 1 */
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -483,7 +482,7 @@ textarea {
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
 }
-@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */
 }
 /* ==========================================================================
@@ -718,7 +717,7 @@ nav .branding .site-name {
   flex-direction: column;
   align-items: center;
   padding: 0 5px;
-  width: 78%;
+  width: 55%;
 }
 nav .branding .site-name h1, nav .branding .site-name h2 {
   transition: 300ms;
@@ -738,11 +737,11 @@ nav .branding .site-name h1 {
 }
 nav .branding .site-name h2 {
   color: #ec825c;
-  font-size: 1.5em;
+  font-size: 2.2em;
 }
 @media (min-width: 768px) {
   nav .branding .site-name h2 {
-    font-size: 2.2em;
+    font-size: 3em;
   }
 }
 nav .navigation-items {
@@ -1260,4 +1259,6 @@ button {
 #reviews .review-container .review-text {
   margin-top: 10px;
   font-size: 1.1em;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
