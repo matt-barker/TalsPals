@@ -304,6 +304,14 @@ padding-left: 0;
       }
     }
   }
+.area-list {
+  @media(min-width:480px){
+    columns: 2;
+    li {
+      break-inside: avoid;
+    }
+  }
+}
 .fancy-border {
   border-radius: $fancy-border;
 }

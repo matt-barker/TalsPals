@@ -18,6 +18,17 @@
   }
     .services-text {
         position: relative;
+        // Body sub-headings, smaller than the global 2em <h3>.
+        h3 {
+          font-size: 1.7em;
+          color: $primary-colour;
+          margin-top: 1.2em;
+          margin-bottom: 0.4em;
+        }
+        .lead {
+          font-size: 1.55em;
+          line-height: 1.5;
+        }
     }
   .services-image {
 	border-radius: $fancy-border;

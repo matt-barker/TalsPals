@@ -23,6 +23,9 @@ IMAGES=(
   "hero:640,960,1280,1600,1920,2560"
   "services:400,600,800,1200,1600"
   "about:400,600,800,1200,1600"
+  # Portrait scan of the Dog First Aid certificate, shown as a small
+  # thumbnail in the About section (capped at 300 CSS px, so 600 covers 2x).
+  "certificate:300,600"
 )
 
 for entry in "${IMAGES[@]}"; do

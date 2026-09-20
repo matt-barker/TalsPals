@@ -1,0 +1,134 @@
+// FAQ — a subsection of #about. Built on <details>/<summary> so the answers
+// are always in the DOM (crawlers and assistants read them) and the accordion
+// works with no JavaScript.
+.faq {
+  position: relative; // sit above #about's .background-image
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 20px;
+  clear: both; // clear the floated .image-left above
+
+  .faq-heading {
+    text-align: center;
+    color: $primary-colour;
+    font-size: 2.2em;
+    margin-bottom: 0.8em;
+    @media (min-width: 768px) {
+      font-size: 2.6em;
+    }
+  }
+
+  .faq-item {
+    background: #fff;
+    border-radius: 12px;
+    border-left: 6px solid $secondary-colour;
+    margin-bottom: 12px;
+
+    > summary {
+      display: block; // removes the default marker in most browsers
+      list-style: none; // ...and in the rest
+      cursor: pointer;
+      position: relative;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 700;
+      font-size: 1.3em;
+      color: $primary-colour;
+      padding: 18px 55px 18px 20px;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "+";
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.4em;
+        line-height: 1;
+        color: $secondary-colour;
+      }
+
+      &:hover {
+        color: $secondary-colour;
+      }
+
+      &:focus-visible {
+        outline: 3px solid $secondary-colour;
+        outline-offset: -3px;
+      }
+    }
+
+    &[open] > summary::after {
+      content: "\2212"; // minus
+    }
+
+    .faq-answer {
+      padding: 0 20px 8px 20px;
+      p {
+        margin-top: 0;
+        font-size: 1.25em;
+      }
+    }
+
+    // The first aid answer carries the certificate scan alongside the text.
+    .faq-answer-with-image {
+      @media (min-width: 600px) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .faq-certificate {
+        display: block;
+        width: 200px;
+        max-width: 100%;
+        margin: 0 auto 15px auto;
+        text-align: center;
+        text-decoration: none;
+        @media (min-width: 600px) {
+          flex: 0 0 200px;
+          margin: 0;
+        }
+        img {
+          border: 1px solid #d9d9d9;
+          border-radius: 4px;
+        }
+        .faq-certificate-caption {
+          display: block;
+          margin-top: 6px;
+          font-size: 0.95em;
+          color: $secondary-colour;
+          text-decoration: underline;
+        }
+        &:hover .faq-certificate-caption {
+          color: $primary-colour;
+        }
+      }
+
+      p {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}
+
+// An inline, in-sentence scroll link. Resets the global orange <button>.
+.link-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: $secondary-colour;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-colour;
+  }
+}
