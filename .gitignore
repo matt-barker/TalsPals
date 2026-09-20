@@ -5,3 +5,6 @@ prepros.config
 
 # Local marketing drafts (not for git)
 /marketing/
+
+# Local logo working files (source PNGs + recolour scripts, not shipped)
+/logos/
