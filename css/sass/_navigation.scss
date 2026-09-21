@@ -112,7 +112,8 @@ nav {
         border-radius: $fancy-border;
         transition:300ms;
         &:hover,&:focus-visible,&.active{
-          color:#f7f7f7;
+          // dark navy rather than white: white on the brand orange is only 2.5:1
+          color:#172a3d;
           text-decoration: none;
           background: $secondary-colour;
           cursor: pointer;
