@@ -58,15 +58,15 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main-header.css?v=4" />
-    <link rel="stylesheet" href="css/main.css?v=18" />
+    <link rel="stylesheet" href="css/main-header.css?v=5" />
+    <link rel="stylesheet" href="css/main.css?v=19" />
     <!-- Preload the hero (LCP element) at the width this device will actually use. -->
     <link
       rel="preload"
       as="image"
       type="image/avif"
       href="img/photos/hero-1280.avif"
-      imagesrcset="img/photos/hero-640.avif 640w, img/photos/hero-960.avif 960w, img/photos/hero-1280.avif 1280w, img/photos/hero-1600.avif 1600w, img/photos/hero-1920.avif 1920w, img/photos/hero-2560.avif 2560w"
+      imagesrcset="img/photos/hero-640.avif 640w, img/photos/hero-800.avif 800w, img/photos/hero-960.avif 960w, img/photos/hero-1280.avif 1280w, img/photos/hero-1600.avif 1600w, img/photos/hero-1920.avif 1920w, img/photos/hero-2560.avif 2560w"
       imagesizes="100vw"
       fetchpriority="high"
     />
@@ -339,11 +339,16 @@
     <nav class="navigation main-navigation">
       <div class="nav-container">
         <div class="branding">
-          <img
-            src="img/dog.png"
-            class="logo-icon"
-            alt="Tal's Pals logo, cartoon dog with heart and paw print."
-          />
+          <picture>
+            <source type="image/avif" srcset="img/dog-256.avif" />
+            <img
+              src="img/dog-256.png"
+              width="256"
+              height="256"
+              class="logo-icon"
+              alt="Tal's Pals logo, cartoon dog with heart and paw print."
+            />
+          </picture>
           <div class="site-name">
             <span class="sr-only">Tal's Pals</span>
             <p class="tagline">Dog Walking</p>
@@ -360,6 +365,7 @@
         </div>
       </div>
     </nav>
+    <main>
     <!--home-->
     <section id="home">
       <picture>
@@ -368,6 +374,7 @@
           sizes="100vw"
           srcset="
             img/photos/hero-640.avif   640w,
+            img/photos/hero-800.avif   800w,
             img/photos/hero-960.avif   960w,
             img/photos/hero-1280.avif 1280w,
             img/photos/hero-1600.avif 1600w,
@@ -380,6 +387,7 @@
           sizes="100vw"
           srcset="
             img/photos/hero-640.webp   640w,
+            img/photos/hero-800.webp   800w,
             img/photos/hero-960.webp   960w,
             img/photos/hero-1280.webp 1280w,
             img/photos/hero-1600.webp 1600w,
@@ -392,6 +400,7 @@
           sizes="100vw"
           srcset="
             img/photos/hero-640.jpg   640w,
+            img/photos/hero-800.jpg   800w,
             img/photos/hero-960.jpg   960w,
             img/photos/hero-1280.jpg 1280w,
             img/photos/hero-1600.jpg 1600w,
@@ -457,7 +466,7 @@
             </picture>
           </div>
           <div class="services-text">
-            <img src="img/dog-playing.svg" class="background-image" alt="" />
+            <img src="img/dog-playing.svg" class="background-image" width="445" height="445" alt="" />
             <h1>Dog walking and pet visits in Staveley, Chesterfield</h1>
             <p class="lead">
               Tal’s Pals is a fully insured, dog first aid trained dog walking
@@ -466,7 +475,7 @@
               group walk ever has more than three dogs in it.
             </p>
 
-            <h3>Dog walking in Staveley and surrounding areas</h3>
+            <h2>Dog walking in Staveley and surrounding areas</h2>
             <p>
               Group walks take up to three dogs at a time. Keeping the group
               small means every dog gets the attention it needs and gets the
@@ -481,7 +490,7 @@
               regular weekly booking or as a one-off.
             </p>
 
-            <h3>Pet visits for cats and small animals</h3>
+            <h2>Pet visits for cats and small animals</h2>
             <p>
               Pet visits take care of your cat or small animal at home while
               you are at work or away. A visit can include feeding and fresh
@@ -489,7 +498,7 @@
               and simply spending time with them for company.
             </p>
 
-            <h3>Areas I cover</h3>
+            <h2>Areas I cover</h2>
             <p>
               Tal’s Pals is based in Staveley, Chesterfield, and covers the
               surrounding areas:
@@ -519,7 +528,7 @@
             <div class="row price-row">
               <div class="col-lg-6 price-panel">
                 <div class="price-panel-inner fancy-border">
-                  <img src="img/walking-the-dog.svg" alt="" />
+                  <img src="img/walking-the-dog.svg" width="120" height="120" loading="lazy" alt="" />
                   <h3>Dog Walking</h3>
                   <div class="price-list">
                     <p>30 minutes:<span class="price"> £12 </span></p>
@@ -535,7 +544,7 @@
               </div>
               <div class="col-lg-6 price-panel">
                 <div class="price-panel-inner fancy-border">
-                  <img src="img/dog-dish.svg" alt="" />
+                  <img src="img/dog-dish.svg" width="120" height="120" loading="lazy" alt="" />
                   <h3>Pet Visits</h3>
                   <div class="price-list">
                     <p>30 minutes:<span class="price"> £12 </span></p>
@@ -604,7 +613,7 @@
             </picture>
           </div>
           <div class="about-text">
-            <img src="img/man-and-dog.svg" class="background-image" alt="" />
+            <img src="img/man-and-dog.svg" class="background-image" width="416" height="416" loading="lazy" alt="" />
 
             <p>
               My name is Chantal Barker and I run Tal’s Pals from my home in
@@ -784,11 +793,11 @@
             <div class="review-details">
               <span class="review-name"><a href="https://www.google.com/maps/contrib/104874088456699159385/reviews" target="_blank" rel="noopener nofollow">Susan Baker Pearson</a></span>
               <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
               </div>
             </div>
           </div>
@@ -801,11 +810,11 @@
             <div class="review-details">
               <span class="review-name"><a href="https://www.google.com/maps/contrib/106577698144174970876/reviews" target="_blank" rel="noopener nofollow">Beth Adams-Pickering</a></span>
               <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
               </div>
             </div>
           </div>
@@ -818,11 +827,11 @@
             <div class="review-details">
               <span class="review-name"><a href="https://www.google.com/maps/contrib/112226594319200799359/reviews" target="_blank" rel="noopener nofollow">mandy Sellers</a></span>
               <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
               </div>
             </div>
           </div>
@@ -835,11 +844,11 @@
             <div class="review-details">
               <span class="review-name"><a href="https://www.google.com/maps/contrib/113665200391830856974/reviews" target="_blank" rel="noopener nofollow">Samantha Horsburgh</a></span>
               <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
               </div>
             </div>
           </div>
@@ -852,11 +861,11 @@
             <div class="review-details">
               <span class="review-name"><a href="https://www.google.com/maps/contrib/105831869055005803021/reviews" target="_blank" rel="noopener nofollow">Ellie Linacre</a></span>
               <div class="review-rating" role="img" aria-label="Rated 5 out of 5 stars">
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
-                <img src="img/star-full.svg" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
+                <img src="img/star-full.svg" width="30" height="30" alt="" />
               </div>
             </div>
           </div>
@@ -867,11 +876,11 @@
       </div>
       <p class="review-summary">
         <span class="review-rating" role="img" aria-label="Rated 5.0 out of 5 stars">
-          <img src="img/star-full.svg" alt="" />
-          <img src="img/star-full.svg" alt="" />
-          <img src="img/star-full.svg" alt="" />
-          <img src="img/star-full.svg" alt="" />
-          <img src="img/star-full.svg" alt="" />
+          <img src="img/star-full.svg" width="30" height="30" alt="" />
+          <img src="img/star-full.svg" width="30" height="30" alt="" />
+          <img src="img/star-full.svg" width="30" height="30" alt="" />
+          <img src="img/star-full.svg" width="30" height="30" alt="" />
+          <img src="img/star-full.svg" width="30" height="30" alt="" />
         </span>
         Rated 5.0 from 25 reviews on Google.
         <a href="https://maps.google.com/?cid=14880911313629508132&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Read them all on Google</a>
@@ -1081,6 +1090,7 @@
         </div>
       </div>
     </section>
+    </main>
     <footer>
       <p>
         <strong>Tal’s Pals</strong> — dog walking and pet visits in Staveley,
@@ -1170,20 +1180,7 @@
           U+2212, U+2215, U+FEFF, U+FFFD;
       }
     </style>
-    <script async src="js/vendor/modernizr-3.8.0.min.js"></script>
-    <script
-      async
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
-    <script async>
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-3.4.1.min.js"><\/script>'
-        );
-    </script>
-    <script src="js/main-dist.js?v=2" async></script>
+    <script src="js/main-dist.js?v=3" defer></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <!--

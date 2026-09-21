@@ -80,6 +80,14 @@ nav {
       padding-left:0;
       display:inline-block;
       margin:5px 0;
+      // Keep all five links on one row on phones. A wrapped row changes the
+      // nav height when the web font swaps in, which shifts the whole page.
+      @media(max-width:767px){
+        display:flex;
+        justify-content:center;
+        white-space:nowrap;
+        line-height:1.25;
+      }
       li {
         display: inline;
       }
@@ -87,13 +95,13 @@ nav {
         font-family: "Quicksand", sans-serif;
         display: inline;
         text-decoration: none;
-        font-size:1em;
+        font-size:.9em; // smallest phones: keeps all five links inside 320px
         //margin:5px;
         padding:5px 2px;
         color:#f7f7f7;
         @media(min-width:361px){
           //margin:5px;
-          padding:3px 8px;
+          padding:3px clamp(3px, 1.3vw, 8px);
           font-size:1em;
         }
         @media(min-width:768px){

@@ -20,7 +20,7 @@ OUT="img/photos"
 # Hero is full-bleed (sizes=100vw) so it needs to reach retina desktop widths.
 # The services/about images are capped at 600 CSS px, so 1200 covers 2x.
 IMAGES=(
-  "hero:640,960,1280,1600,1920,2560"
+  "hero:640,800,960,1280,1600,1920,2560"
   "services:400,600,800,1200,1600"
   "about:400,600,800,1200,1600"
   # Portrait scan of the Dog First Aid certificate, shown as a small

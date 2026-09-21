@@ -29,8 +29,9 @@
             font-size: 2.5em;
           }
         }
-        // Body sub-headings, smaller than the global 2em <h3>.
-        h3 {
+        // Body sub-headings follow the <h1>, so they are <h2> in the outline
+        // but sized smaller than the global section <h2>.
+        h2 {
           font-size: 1.7em;
           color: $primary-colour;
           margin-top: 1.2em;
