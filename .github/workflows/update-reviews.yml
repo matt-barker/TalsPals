@@ -1,0 +1,39 @@
+name: Update Google reviews
+
+# Refreshes the Reviews section of index.html from the Google Business listing
+# and commits it if anything changed. Netlify deploys the commit as usual.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # Mondays, 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch reviews and rewrite index.html
+        run: node tools/update-reviews.mjs
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update Google reviews" -- index.html
+          git push

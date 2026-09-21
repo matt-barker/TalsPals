@@ -18,7 +18,7 @@
     .review-container{
         display: flex;
         flex-direction: column;
-        padding:50px 0;
+        padding:50px 0 20px;
         @media(min-width:768px){
                 flex-direction: row;
             flex-wrap: wrap;
@@ -30,13 +30,6 @@
             width:100%;
             @media(min-width:768px){
                 width:50%;
-            }
-            .review-image {
-                
-                img {
-                    border-radius: 100%;
-                    width:80px;
-                } 
             }
             .review-rating {
                 img {
@@ -51,7 +44,6 @@
             display: flex;
         }
         .review-details {
-            margin-left: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -59,6 +51,27 @@
         .review-text {
             margin-top: 10px;
             font-size:1.1em;
+        }
+    }
+    a {
+        color: $primary-colour;
+        text-decoration: underline;
+        &:hover, &:focus {
+            color: $secondary-colour;
+        }
+    }
+    .review-name a {
+        text-decoration: none;
+    }
+    .review-summary {
+        padding: 0 10px 50px;
+        text-align: center;
+        font-size: 1.1em;
+        .review-rating {
+            display: block;
+            img {
+                width:30px;
+            }
         }
     }
 }
