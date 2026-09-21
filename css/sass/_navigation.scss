@@ -42,21 +42,13 @@ nav {
       align-items: center;
       padding:0 5px;
       width:55%;
-      h1,h2 {
+      .tagline {
+        font-family: "Quicksand", sans-serif;
+        font-weight: 500;
         transition: 300ms;
-        color:#f7f7f7;
         display:inline-block;
         margin:5px 0;
         line-height: .8em;
-      }
-      h1 {
-        font-family:"Pacifico" , cursive;
-        font-size: 1.8em;
-        @media(min-width:768px){
-          font-size:2.8em;
-        }
-      }
-      h2 {
         color: $secondary-colour;
         font-size: 2.2em;
         
@@ -89,8 +81,12 @@ nav {
       display:inline-block;
       margin:5px 0;
       li {
+        display: inline;
+      }
+      li a {
         font-family: "Quicksand", sans-serif;
         display: inline;
+        text-decoration: none;
         font-size:1em;
         //margin:5px;
         padding:5px 2px;
@@ -107,9 +103,15 @@ nav {
         }
         border-radius: $fancy-border;
         transition:300ms;
-        &:hover,&.active{
+        &:hover,&:focus-visible,&.active{
+          color:#f7f7f7;
+          text-decoration: none;
           background: $secondary-colour;
           cursor: pointer;
+        }
+        // bootstrap draws a focus ring on mouse click; keep it for keyboard only
+        &:focus:not(:focus-visible){
+          outline: none;
         }
       }
     }

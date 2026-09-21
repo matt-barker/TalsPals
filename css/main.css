@@ -729,28 +729,18 @@ nav .branding .site-name {
   padding: 0 5px;
   width: 55%;
 }
-nav .branding .site-name h1, nav .branding .site-name h2 {
+nav .branding .site-name .tagline {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
   transition: 300ms;
-  color: #f7f7f7;
   display: inline-block;
   margin: 5px 0;
   line-height: 0.8em;
-}
-nav .branding .site-name h1 {
-  font-family: "Pacifico", cursive;
-  font-size: 1.8em;
-}
-@media (min-width: 768px) {
-  nav .branding .site-name h1 {
-    font-size: 2.8em;
-  }
-}
-nav .branding .site-name h2 {
   color: #ec825c;
   font-size: 2.2em;
 }
 @media (min-width: 768px) {
-  nav .branding .site-name h2 {
+  nav .branding .site-name .tagline {
     font-size: 3em;
   }
 }
@@ -779,32 +769,41 @@ nav .navigation-items ul {
   margin: 5px 0;
 }
 nav .navigation-items ul li {
+  display: inline;
+}
+nav .navigation-items ul li a {
   font-family: "Quicksand", sans-serif;
   display: inline;
+  text-decoration: none;
   font-size: 1em;
   padding: 5px 2px;
   color: #f7f7f7;
 }
 @media (min-width: 361px) {
-  nav .navigation-items ul li {
+  nav .navigation-items ul li a {
     padding: 3px 8px;
     font-size: 1em;
   }
 }
 @media (min-width: 768px) {
-  nav .navigation-items ul li {
+  nav .navigation-items ul li a {
     font-size: 1.3em;
     margin: 10px;
     padding: 7px;
   }
 }
-nav .navigation-items ul li {
+nav .navigation-items ul li a {
   border-radius: 355px 45px 225px 75px/15px 225px 15px 255px;
   transition: 300ms;
 }
-nav .navigation-items ul li:hover, nav .navigation-items ul li.active {
+nav .navigation-items ul li a:hover, nav .navigation-items ul li a:focus-visible, nav .navigation-items ul li a.active {
+  color: #f7f7f7;
+  text-decoration: none;
   background: #ec825c;
   cursor: pointer;
+}
+nav .navigation-items ul li a:focus:not(:focus-visible) {
+  outline: none;
 }
 
 button {
@@ -841,6 +840,18 @@ button {
 }
 #services .services-text {
   position: relative;
+}
+#services .services-text h1 {
+  font-size: 2.1em;
+  line-height: 1.25;
+  color: #274361;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+@media (min-width: 768px) {
+  #services .services-text h1 {
+    font-size: 2.5em;
+  }
 }
 #services .services-text h3 {
   font-size: 1.7em;
@@ -1228,6 +1239,18 @@ button {
 #contact {
   position: relative;
 }
+#contact h3 {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  font-size: 3.2em;
+}
+@media (min-width: 768px) {
+  #contact h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 3.5em;
+  }
+}
 #contact:before {
   position: absolute;
   content: " ";
@@ -1323,7 +1346,7 @@ button {
   justify-content: space-around;
   justify-content: space-evenly;
 }
-#contact .contact-panels .contact-panel-wrapper .contact-panel a, #contact .contact-panels .contact-panel-wrapper .contact-panel h2 {
+#contact .contact-panels .contact-panel-wrapper .contact-panel a, #contact .contact-panels .contact-panel-wrapper .contact-panel h3 {
   margin: 0;
   margin-bottom: 0;
   margin-top: 0;
@@ -1407,6 +1430,25 @@ button {
 #reviews .review-container .review-text {
   margin-top: 10px;
   font-size: 1.1em;
+}
+
+footer {
+  background: #274361;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 30px 25px;
+}
+footer p {
+  font-size: 1.2em;
+  max-width: 700px;
+  margin: 0 auto 8px auto;
+}
+footer a {
+  color: #f7f7f7;
+  text-decoration: underline;
+}
+footer a:hover, footer a:focus {
+  color: #ec825c;
 }
 
 /*# sourceMappingURL=main.css.map */

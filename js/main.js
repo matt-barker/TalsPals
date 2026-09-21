@@ -12,7 +12,9 @@ $(document).ready(function(){
     }
   };//mobileView()
   
-  $(".scroll-button").click(function() {
+  $(".scroll-button").click(function(ev) {
+    // nav items are real links so they work without JS; stop the native jump
+    ev.preventDefault();
     var e = $(this).attr("data-scroll-to");
     var n=$(".main-navigation").outerHeight();
     console.log(n);

@@ -1,5 +1,16 @@
 #contact {
     position: relative;
+    // Panel and form headings are <h3> for document outline but keep the <h2> look.
+    h3 {
+      margin-top:0.3em;
+      margin-bottom: 0.3em;
+      font-size: 3.2em;
+      @media(min-width:768px){
+        margin-top:0.5em;
+        margin-bottom: 0.5em;
+        font-size: 3.5em;
+      }
+    }
     &:before {
         position: absolute;
     content: " ";
@@ -85,7 +96,7 @@
         flex-direction: column;
         justify-content: space-around;
         justify-content: space-evenly;
-          a,h2 {
+          a,h3 {
           margin: 0;
           margin-bottom: 0;
           margin-top: 0;

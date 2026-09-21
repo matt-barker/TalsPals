@@ -18,6 +18,17 @@
   }
     .services-text {
         position: relative;
+        // Page <h1>; sized between the section <h2> and the body sub-headings.
+        h1 {
+          font-size: 2.1em;
+          line-height: 1.25;
+          color: $primary-colour;
+          margin-top: 0;
+          margin-bottom: 0.6em;
+          @media(min-width:768px){
+            font-size: 2.5em;
+          }
+        }
         // Body sub-headings, smaller than the global 2em <h3>.
         h3 {
           font-size: 1.7em;
